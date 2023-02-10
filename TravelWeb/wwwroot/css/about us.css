@@ -1,0 +1,350 @@
+@media only screen and (max-width: 1920px) {}
+
+
+
+
+body {
+    width: 100%;
+    /* height:1450px; */
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: #F1E9DF;
+}
+
+/* #allcover {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+} */
+
+/* 選單列 */
+#titileco {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: #F1E9DF;
+
+}
+
+#titile {
+    width: 100%;
+    height: 150px;
+    background-color: #816E4A;
+    position: fixed;
+    display: inline-flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* margin: 0px;
+    padding:0px;
+    border: 0px; */
+    /*Fz-index的數字愈大，代表愈上層 */
+}
+
+#titile div {
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+#logo {
+    /* display: inline-block; */
+    /* flex: 25%; */
+    /* background-color:aqua; */
+    margin: auto auto 10px auto;
+    padding: auto auto;
+
+}
+
+#titile a,
+a:link,
+a:visited,
+a:active {
+    color: white;
+    text-decoration: none;
+    /* background-color: transparent; */
+    text-decoration: none;
+}
+
+
+#bar {
+    /* flex: 75%; */
+    /* background-color:brown; */
+    margin: auto auto 40px auto;
+    padding: auto auto;
+
+
+    /* display: inline-flex; */
+
+}
+
+
+.logo_img {
+    /* background-color:blue; */
+    width: 130px;
+    margin: 25px auto;
+    padding: auto auto;
+
+}
+
+.logo_comp {
+    /* background-color:coral; */
+    color: white;
+    /* font-weight: bolder; */
+    font-size: 48px;
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: inline-flex;
+    margin: auto 15px;
+    padding: auto auto;
+
+}
+
+.navBar {
+
+    list-style-type: none;
+    /* font-weight: bold; */
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    margin: auto auto;
+    padding: auto auto;
+
+
+}
+
+.navBar li {
+    /* background-color:crimson; */
+    display: inline-block;
+    margin: auto 50px auto auto;
+
+}
+
+.navBar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: auto auto;
+}
+
+.navBar li:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+/* 分隔線//////////////////////////////////////////////////////////////////////////////// */
+/* #bench{
+    background-color: aqua;
+    border:1px solid #404040;
+    margin:100px auto auto auto;
+    position:absolute;
+} */
+#bench img {
+    display: block;
+    /* 下方不會有填不滿的現象，div袋子裡不會有空白處 */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+    /* margin: 500px auto auto auto; */
+}
+
+/* 內容//////////////////////////////////////////////////////////////////////////////// */
+
+* {
+    box-sizing: border-box;
+    border: 0px;
+    /* 將 box-sizing 設定成 border-box 後， 
+    width / height 的作用範圍就是指到 border
+    這個 box 的範圍了，我們就稱為 border-box，
+    從前面所寫的可以了解一個物件的範圍，
+    是由四個層層包裹的矩形所構成， */
+}
+
+#content {
+    background-color: aquamarine;
+    /* margin: 0px;
+    padding: 0px; */
+    /* display: inline-flex; */
+    /* flex/inline-flex 很像 block/inline-block 但其實不是的這個事實，他們的差別如：
+    1.float 和 clear 無法使用於彈性容器內
+    2.vertical-align 對彈性項目沒有效果（但對彈性項目裡面的內容還是有用的）
+    3.偽元素 ::first-line 和 ::first-letter 無法使用於彈性容器本身 */
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    background-color: #D7C1A3;
+    width: 25%;
+    height: 1000px;
+    padding-left: 2%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab div {
+    /* background-color: aqua; */
+    font-size: 30px;
+    padding: 25px 16px;
+    /* width: 100%; */
+    /* 不要有框 */
+    /* outline: 100px; */
+    flex-direction: column;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    /* margin: 30px 10px 30px 10px; */
+    margin: 40px auto auto 30px;
+
+}
+
+.tab a {
+    font-family: '華康粗明體';
+    color: rgb(0, 0, 0);
+    padding: 20px 30px;
+
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    color: white;
+}
+
+/* Create an active/current "tab button" class */
+.tab a.active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #CDB28D;
+    padding: 20px 40px;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    /* background-color: aqua; */
+    float: right;
+    padding: 50px 130px;
+    border: none;
+    width: 75%;
+    /* height: 300px; */
+    align-items: center;
+    font-size: 30px;
+}
+
+.abouscon {
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    color: #404040;
+    padding: 0px 15px;
+    line-height: 60px;
+}
+
+.aboustit {
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    color: black;
+    font-size: larger;
+
+}
+
+hr {
+    border-top: 1px solid #816E4A;
+}
+
+
+.profile div {
+    /* background-color: aqua; */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profile div p {
+    /* background-color: aqua; */
+    padding: 0px 40px;
+}
+
+.profile {
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+.propic {
+    width: 200px;
+}
+
+
+/* 頁尾////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////尾部//////////////// */
+#cov3 {
+    /* background-color: coral; */
+    z-index: 9999;
+    margin: 1000px auto auto auto;
+    /* padding-bottom: -50px; */
+    /*Fz-index的數字愈大，代表愈上層 */
+}
+
+
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: #816E4A;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0px;
+}
+
+#contacttil1 {
+    /* background-color: aqua; */
+    padding-right: 650px;
+    /* margin: auto 50px auto auto; */
+}
+
+#contacttil {
+    list-style-type: none;
+    color: white;
+    font-size: 26px;
+    font-family: '華康粗明體';
+}
+
+.contact {
+    list-style-type: none;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    margin: 0px 0px 15px 40px;
+}
+
+.contact img {
+    margin: 0px 10px 0px 0px;
+    width: 24px;
+    vertical-align: text-top
+}
+
+/* #cov3 img {
+    width: 20px;
+    vertical-align:text-top;  
+} */
+#contacttil2 {
+    /* background-color:aquamarine; */
+    margin-right: 175px;
+
+}
+
+#contacttil2 p {
+    /* background-color:aquamarine; */
+    list-style-type: none;
+    color: white;
+    font-size: 26px;
+    font-family: '華康粗明體';
+}
+
+.contact2 {
+    width: 28px;
+    margin: 0px 20px 0px 0px;
+
+}

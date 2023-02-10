@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon/logo-1.png" type="image/png" sizes="16x16">
+    <title>山明旅遊</title>
+    <!-- 載入css檔-->
+    <link rel="stylesheet" href="../css/cover.css">
+    <script type="text/javascript" src="../js/jquery.js"></script> <!-- 已下載好Jquery -->
+
+</head>
+
+<body>
+    <div id="allcover">
+        <div id="cov1">
+            <div id="logo">
+                <div><img class="logo_img" src="../images/icon/logo-2.png"></div>
+                <div class="logo_comp">
+                    <p>山明旅遊</p>
+                </div>
+            </div>
+            <div id="bar">
+                <nav>
+                    <ul class='navBar'>
+                        <li><a href="./about us.html">品牌故事</a></li>
+                        <li><a href="./travel.html">定期活動</a></li>
+                        <li><a href="./news.html">最新消息</a></li>
+                        <li><a href="./questionaire.html">聯繫我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="cov2">
+            <div class="threedot">
+                <span class="dot" id="dot1"></span>
+                <br>
+                <span class="dot" id="dot2"></span>
+                <br>
+                <span class="dot" id="dot3"></span>
+            </div>
+            <div id=picgroup>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade" id="pic-1">
+                        <img src="../images/cover/圖片4.png">
+                    </div>
+
+                    <div class="mySlides fade" id="pic-2">
+                        <img src="../images/cover/圖片7.png">
+                    </div>
+
+                    <div class="mySlides fade" id="pic-3">
+                        <img src="../images/cover/圖片13.png">
+                    </div>
+
+                </div>
+                <div id="picbkgroup">
+                    <div id="picback"></div>
+                    <div id="readmore"><a id="readmorea" href="./about us.html">Read more...</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cov3">
+            <footer>
+
+                <div id="contacttil1">
+                    <p id="contacttil">聯繫資訊</p>
+                    <p class="contact"><img src="../images/icon/suitcase-1.png" alt="">山明旅遊股份有限公司</p>
+                    <p class="contact"><img src="../images/icon/telephone-1.png" alt="">電話：04-2234-9876</p>
+                    <p class="contact"><img src="../images/icon/printers-1.png" alt="">傳真：04-2239-9876</p>
+                    <p class="contact"><img src="../images/icon/email-1.png" alt="">E-mail：travelaround@gmail.com</p>
+                </div>
+
+                <div id="contacttil2">
+                    <p>追蹤山明</p>
+                    <a href="https://www.facebook.com/"><img class="contact2" src="../images/icon/facebook-social-logo-1.png" alt=""></a>
+                    <a href="https://www.instagram.com/"><img class="contact2" src="../images/icon/instagram-1.png" alt=""></a>
+                    </div>
+            </footer>
+
+        </div>
+
+        
+        <!-- 插入JS檔 -->
+        <script src="../js/cover.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#dot1").click(function () {
+                    $("#pic-1").css("display", "block");
+                    $("#pic-2,#pic-3").css("display", "none");
+
+                    $("#dot1").addClass('active');
+                    $("#dot2,#dot3").removeClass('active');
+                })
+            });
+            $(document).ready(function () {
+                $("#dot2").click(function () {
+                    $("#pic-2").css("display", "block");
+                    $("#pic-1,#pic-3").css("display", "none");
+
+                    $("#dot2").addClass('active');
+                    $("#dot1,#dot3").removeClass('active');
+                })
+            });
+            $(document).ready(function () {
+                $("#dot3").click(function () {
+                    $("#pic-3").css("display", "block");
+                    $("#pic-1,#pic-2").css("display", "none");
+
+                    $("#dot3").addClass('active');
+                    $("#dot1,#dot2").removeClass('active');
+                })
+            });
+
+
+
+
+        </script>
+        
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon/logo-1.png" type="image/png" sizes="16x16">
+    <title>山明旅遊</title>
+    <!-- 載入css檔-->
+    <link rel="stylesheet" href="../css/travel.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script> <!-- 已下載好Jquery -->
+
+</head>
+
+<body>
+    <div id="titile">
+        <div id="logo">
+            <div><a href="./cover.html"><img class="logo_img" src="../images/icon/logo-2.png"></a></div>
+            <div class="logo_comp"><a href="./cover.html">
+                    <p>山明旅遊</p>
+                </a></div>
+        </div>
+        <div id="bar">
+            <nav>
+                <ul class='navBar'>
+                    <li><a href="./about us.html">品牌故事</a></li>
+                    <li><a href="./travel.html">定期活動</a></li>
+                    <li><a href="./news.html">最新消息</a></li>
+                    <li><a href="./questionaire.html">聯繫我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="titileco"></div>
+    <div id="bench">
+        <img src="../images/travel/bench-1.jpg" alt="">
+    </div>
+    <div id="myBtnContainer">
+        <div id="filtertit">
+            <div>
+                <p style="color:#404040;font-weight:bolder;font-size: 28px;">篩選條件</p>
+            </div>
+            <div>
+                <button onclick="doncheck()">清除</button>
+            </div>
+        </div>
+
+        <br>
+        <div class="flowers-wrap">
+            <span>地區</span>
+            <br>
+            <input type="checkbox" name="fl-colour" value="taiwan" id="taiwan" />
+            <label for="taiwan">國內</label>
+            <br>
+            <input input type="checkbox" name="fl-colour" value="ENAsia" id="ENAsia" />
+            <label for="ENAsia">東北亞</label>
+            <br>
+            <input input type="checkbox" name="fl-colour" value="ESAsia" id="ESAsia" />
+            <label for="ESAsia">東南亞</label>
+            <hr>
+            <span>旅行天數</span>
+            <br>
+            <input input type="checkbox" name="fl-size" value="one" id="one" />
+            <label for="one">1日遊</label>
+            <br>
+            <input input type="checkbox" name="fl-size" value="two" id="two" />
+            <label for="two">2天1夜</label>
+            <br>
+            <input input type="checkbox" name="fl-size" value="three" id="three" />
+            <label for="three">3天以上</label>
+            <hr>
+            <span>標籤</span>
+            <br>
+            <input type="checkbox" name="fl-cont" value="shopping" id="shopping" />
+            <label for="shopping">在地購物</label>
+            <input type="checkbox" name="fl-cont" value="nature" id="nature" />
+            <label for="nature">自然風景</label>
+            <br>
+            <input type="checkbox" name="fl-cont" value="culture" id="culture" />
+            <label for="culture">文化體驗</label>
+            <input type="checkbox" name="fl-cont" value="history" id="history">
+            <label for="history">歷史風情</label>
+            <br>
+            <input type="checkbox" name="fl-cont" value="food" id="food" />
+            <label for="food">美食之旅</label>
+            <input type="checkbox" name="fl-cont" value="art" id="art" />
+            <label for="art">美術鑑賞</label>
+            <br>
+            <input type="checkbox" name="fl-cont" value="others" id="others" />
+            <label for="others">其他</label>
+        </div>
+    </div>
+    <div id="travelcontent" class="flowers">
+        <div id="travel">
+            <p>行程</p>
+            <hr>
+        </div>
+        <div class="trasch">
+            <div class="flower" data-id="nsea" data-category="taiwan one nature art">
+                <div class="schpic">
+                    <img src="../images/travel/北海岸.png" alt="">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            北海岸一日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>台灣 新北</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>1日遊</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            自然風景、美術鑑賞
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flower" data-id="lavendar" data-category="taiwan two history name">
+                <div class="schpic"><img src="../images/travel/九份.png" alt="">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            九份+平溪兩日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>台灣 新北</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>2天1夜</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            歷史風情、自然風景
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flower" data-id="lavendar" data-category="taiwan two nature art">
+                <div class="schpic"><img src="../images/travel/sheep-1547720_1280.jpg">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            清境+埔里兩日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>台灣 南投</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>2天1夜</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            自然風景、美術鑑賞
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flower" data-id="lavendar" data-category="ESAsia three food shopping history nature">
+                <div class="schpic">
+                <img src="../images/travel/泰國.jpg" alt="">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            泰國四日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>泰國</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>4天3夜</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            美食之旅、在地購物、
+                            <br>
+                            歷史風情、自然風景
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flower" data-id="lavendar" data-category="taiwan one culture shopping">
+                <div class="schpic"><img src="../images/travel/鶯歌.jpg">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            三峽、鶯歌一日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>台灣 新北</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>1日遊</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            文化體驗、在地購物
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flower" data-id="lavendar" data-category="ENAsia three shopping history food">
+                <div class="schpic">
+                    <img src="../images/travel/京阪.jpg" alt="">
+                </div>
+                <div class="tracon">
+                    <div class="tratil">
+                        <p>
+                            京阪四日遊
+                        </p>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/pin.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>日本</p>
+                        </div>
+                    </div>
+                    <div class="picpline">
+                        <div><img src="../images/travel/clock.png" alt="" style="width:20px;"></div>
+                        <div>
+                            <p>4天3夜</p>
+                        </div>
+                    </div>
+                    <div class="tratags">
+                        <p>標籤：
+                            <br>
+                            在地購物、歷史風情、
+                            <br>
+                            美食之旅
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>
+    
+
+    
+
+
+    <div id="cov3">
+        <footer>
+
+            <div id="contacttil1">
+                <p id="contacttil">聯繫資訊</p>
+                <p class="contact"><img src="../images/icon/suitcase-1.png" alt="">山明旅遊股份有限公司</p>
+                <p class="contact"><img src="../images/icon/telephone-1.png" alt="">電話：04-2234-9876</p>
+                <p class="contact"><img src="../images/icon/printers-1.png" alt="">傳真：04-2239-9876</p>
+                <p class="contact"><img src="../images/icon/email-1.png" alt="">E-mail：travelaround@gmail.com</p>
+            </div>
+
+            <div id="contacttil2">
+                <p>追蹤山明</p>
+                <a href="https://www.facebook.com/"><img class="contact2"
+                        src="../images/icon/facebook-social-logo-1.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="contact2" src="../images/icon/instagram-1.png"
+                        alt=""></a>
+            </div>
+        </footer>
+
+    </div>
+    <!-- 插入JS檔 -->
+    <script src="../js/cheboxmutfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+@media only screen and (max-width: 1920px) {}
+
+
+
+
+body {
+    width: 100%;
+    /* height:1450px; */
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: #F1E9DF;
+}
+
+/* #allcover {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+} */
+
+/* 選單列 */
+#titileco{
+    display: block; 
+    width: 100%;
+    height: 150px; 
+    background-color:#F1E9DF;
+
+}
+#titile {
+    width: 100%;
+    height: 150px;
+    background-color: #816E4A;
+    position: fixed;
+    display: inline-flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* margin: 0px;
+    padding:0px;
+    border: 0px; */
+    /*Fz-index的數字愈大，代表愈上層 */
+}
+
+#titile div {
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+#logo {
+    /* display: inline-block; */
+    /* flex: 25%; */
+    /* background-color:aqua; */
+    margin: auto auto 10px auto;
+    padding: auto auto;
+
+}
+
+#titile a,
+a:link,
+a:visited,
+a:active {
+    color: white;
+    text-decoration: none;
+    /* background-color: transparent; */
+    text-decoration: none;
+}
+
+
+#bar {
+    /* flex: 75%; */
+    /* background-color:brown; */
+    margin: auto auto 40px auto;
+    padding: auto auto;
+
+
+    /* display: inline-flex; */
+
+}
+
+
+.logo_img {
+    /* background-color:blue; */
+    width: 130px;
+    margin: 25px auto;
+    padding: auto auto;
+
+}
+
+.logo_comp {
+    /* background-color:coral; */
+    color: white;
+    /* font-weight: bolder; */
+    font-size: 48px;
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: inline-flex;
+    margin: auto 15px;
+    padding: auto auto;
+
+}
+
+.navBar {
+
+    list-style-type: none;
+    /* font-weight: bold; */
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    margin: auto auto;
+    padding: auto auto;
+
+
+}
+
+.navBar li {
+    /* background-color:crimson; */
+    display: inline-block;
+    margin: auto 50px auto auto;
+
+}
+
+.navBar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: auto auto;
+}
+
+.navBar li:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+/* 分隔線//////////////////////////////////////////////////////////////////////////////// */
+
+#bench img { 
+    display: block;  
+    /* 下方不會有填不滿的現象，div袋子裡不會有空白處 */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position:bottom;
+    /* margin: 500px auto auto auto; */
+}
+
+/* 內容//////////////////////////////////////////////////////////////////////////////// */
+* {
+    box-sizing: border-box;
+    /* 將 box-sizing 設定成 border-box 後， 
+    width / height 的作用範圍就是指到 border
+    這個 box 的範圍了，我們就稱為 border-box，
+    從前面所寫的可以了解一個物件的範圍，
+    是由四個層層包裹的矩形所構成， */
+}
+
+.news p {
+    font-size: 26px;
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    color:#404040;
+    padding:0px;
+    margin:3px;
+}
+
+#newscon{
+    /* background-color: aqua; */
+    width:100%;
+}
+#theme>div{
+    /* background-color: blueviolet; */
+    display:flex; 
+    /* div不會無限擴散 */
+    flex-direction: column;
+    align-items: center;
+} 
+#themetit{
+    /* background-color: aqua; */
+    margin:40px auto 5px auto;
+}
+#themetit p{
+    font-size:28px;
+    color:white;
+    background-color:#C09D6E;
+    padding:10px 70px; /* 類botton */
+}
+#themecon{
+    /* background-color: blue; */
+    margin:30px auto 45px auto;
+    /* border-bottom: #595959 4px solid ; */
+}
+#themecon p{
+    color: #595959;
+    margin: 0px;
+    padding: 0px;
+}
+.themenews{
+    /* background-color: aquamarine; */
+    margin:3% 7% 7% 7%;
+    display:flex; 
+    /* div不會無限擴散 */
+    flex-direction: column;
+    align-items: center;
+    
+}
+#thetime>p{
+    /* background-color: blue; */
+    margin:auto 990px auto auto ;
+    padding-bottom:20px;
+}
+.themenews>div>p{
+    font-weight: bolder;
+}
+.thememiddle{
+    /* background-color:#816E4A; */
+    display:inline-flex;
+    flex-direction: row;
+    align-items:center;
+}
+.thepic~div {
+    /* background-color: aqua; */
+    display:inline-flex;
+    flex-direction:column;
+    /* padding:auto 50px; */
+}
+
+.theadr>div{
+    /* background-color:coral; */
+    display:inline-flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.thetext{
+    /* background-color: darkslategrey; */
+    margin:auto 360px auto 60px;
+    /* width:50%; */
+}
+.thetext>div{
+  /* background-color: aqua;   */
+  margin:7px 0px;
+  padding: auto auto auto 200px;
+}
+
+.theadr>div>img{
+    /* background-color: #F1E9DF; */
+    width:30px;
+    
+}
+hr{
+    border: #A29083 1px solid;
+    margin:70px 300px 0px 300px;
+}
+
+button{
+    background-color:#CDB28D;
+    font-size:26px;
+    font-family: '華康粗明體';
+    color: white;
+    border:none;
+    padding:10px 70px;
+    margin: 0px;
+}
+button:hover {
+    border: 1px solid #C09D6E;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ///////////////////////////////////////////////////////////////尾部//////////////// */
+#cov3 {
+    /* background-color: coral; */
+    z-index: 9999;
+    margin: 400px auto auto auto;
+    /* padding-bottom: -50px; */
+    /*Fz-index的數字愈大，代表愈上層 */
+}
+
+
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: #816E4A;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    margin: 0px;
+}
+
+#contacttil1 {
+    /* background-color: aqua; */
+    padding-right:650px;
+    /* margin: auto 50px auto auto; */
+}
+#contacttil{
+list-style-type: none;
+color: white;
+font-size: 26px;
+font-family: '華康粗明體';
+margin:25px 0px 25px 0px;
+}
+.contact {
+    list-style-type: none;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', '華康粗明體', sans-serif;
+    margin: 0px 0px 15px 40px;
+}
+
+.contact img {
+    margin: 0px 10px 0px 0px;
+    width: 24px;
+    vertical-align: text-top
+}
+
+/* #cov3 img {
+    width: 20px;
+    vertical-align:text-top;  
+} */
+#contacttil2{
+    /* background-color:aquamarine; */
+    margin-right:175px;
+    
+}
+#contacttil2 p {
+    /* background-color:aquamarine; */
+    list-style-type: none;
+    color: white;
+    font-size: 26px;
+    font-family: '華康粗明體';
+    margin:25px 0px 25px 0px;
+}
+
+.contact2 {
+    width: 28px;
+    margin: 0px 20px 0px 0px;
+
+}
+
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon/logo-1.png" type="image/png" sizes="16x16">
+    <title>山明旅遊</title>
+    <!-- 載入css檔-->
+    <link rel="stylesheet" href="../css/questionaire.css">
+</head>
+
+<body>
+    
+    <div id="titile">
+        <div id="logo">
+            <div><a href="./cover.html"><img class="logo_img" src="../images/icon/logo-2.png"></a></div>
+            <div class="logo_comp"><a href="./cover.html">
+                    <p>山明旅遊</p>
+                </a></div>
+        </div>
+        <div id="bar">
+            <nav>
+                <ul class='navBar'>
+                    <li><a href="./about us.html">品牌故事</a></li>
+                    <li><a href="./travel.html">定期活動</a></li>
+                    <li><a href="./news.html">最新消息</a></li>
+                    <li><a href="./questionaire.html">聯繫我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="titileco"></div> <!-- 防止下面往上跑，跟CSS有連結 -->
+    <div id="bench">
+        <img src="../images/quesionaire/pexels-photo-681347.jpeg">
+    </div>
+    <div class="questionaire">
+        <div id="quest">
+            <div id="quetitle">
+                <p>私人訂製旅遊
+                </p>
+            </div>
+            <hr>
+            <div class="quecon">
+                <ul>
+                    <li><label for="username">
+                            姓名
+                        </label>
+                        <input type="text" name="username" id="username" placeholder="請輸入文字">
+                    </li>
+
+                    <li><label for="userphone">
+                            連絡電話
+                        </label>
+                        <input type="text" name="userphone" id="userphone" placeholder="請輸入數字">
+                    </li>
+
+                    <li><label for="useremail">
+                            E-MAIL
+                        </label>
+                        <input type="text" name="useremail" id="useremail" placeholder="請輸入文字">
+                    </li>
+
+                    <li><label for="userper">
+                            旅遊人數
+                        </label></li>
+                    <label>大人</label>
+                    <input style="width:100px;" type="text" name="userper" placeholder="輸入數字">
+                    <label>人，</label>
+                    <label>小孩</label>
+
+                    <input style="width:100px;" type="text" name="userper" placeholder="輸入數字">
+                    <label>人。</label>
+                    <li><label>旅遊地點（單選）：</label></li>
+                    <input type="checkbox" id="taiwan" name="job">
+                    <label for="taiwan">國內旅遊</label>
+                    <input type="checkbox" id="forigen" name="job">
+                    <label for="forigen">國外旅遊，地點</label>
+                    <input type="text" name="forigen" placeholder="請輸入文字">
+
+                    <li><label for="turdays">旅遊天數：</label>
+                        <select name="turdays" id="turdays">
+                            <option value="1">1~3天</option>
+                            <option value="2">3~5天</option>
+                            <option value="3">5~10天</option>
+                            <option value="4">10天以上</option>
+                        </select>
+                    </li>
+
+                    <li><label for="turmon">行程預算（1/人/天）：
+                        </label>
+                        <select name="turmon" id="turmon">
+                            <optgroup>
+                                <option value="01">2000-3000元</option>
+                                <option value="02">3000-5000元</option>
+                                <option value="03">5000-10000元</option>
+                                <option value="04">10000~30000元</option>
+                                <option value="05">30000元以上</option>
+                            </optgroup>
+                        </select>
+                    </li>
+
+
+                    <li id="turprefer"><label>旅遊偏好（多選）</label>
+                        <br>
+                        <input type="checkbox" id="turhot" name='turpre'>
+                        <label for="turhot">熱門景點</label>
+                        <input type="checkbox" id="tursho" name='turpre'>
+                        <label for="tursho">在地購物</label>
+                        <input type="checkbox" id="turnat" name='turpre'>
+                        <label for="turnat">自然風景</label>
+                        <input type="checkbox" id="turcult" name='turpre'>
+                        <label for="turcult">文化體驗</label>
+                        <br>
+                        <input type="checkbox" id="turhis" name='turpre'>
+                        <label for="turhis">歷史風情</label>
+                        <input type="checkbox" id="turfood" name='turpre'>
+                        <label for="turfood">美食之旅</label>
+                        <input type="checkbox" id="turart" name='turpre'>
+                        <label for="turart">美術鑑賞</label>
+                        <input type="checkbox" id="turchi" name='turpre'>
+                        <label for="turchi">親子旅遊</label>
+                        <br>
+                        <input type="checkbox" id="peroth" name='turpre'>
+                        <label for="peroth">其他</label>
+                        <input type="text" name="peroth" placeholder="請輸入文字">
+                    </li>
+                    <li><label>飲食偏好（團體中如有不同偏好，多選）：</label></li>
+                    <input type="checkbox" id="foodmeat" name='turpre'>
+                    <label for="foodmeat">葷食</label>
+                    <input type="checkbox" id="foodegg" name='turpre'>
+                    <label for="foodegg">蛋奶素</label>
+                    <input type="checkbox" id="vegen" name='turpre'>
+                    <label for="vegen">全素</label>
+                    <li><label for="usersay">
+                            備註
+                        </label>
+                        <br>
+                        <input id="usersay" type="text" name="usersay" placeholder="請輸入文字">
+                    </li>
+                </ul>
+                <div class="tursend">
+                    <button>提交</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="cov3">
+        <footer>
+
+            <div id="contacttil1">
+                <p id="contacttil">聯繫資訊</p>
+                <p class="contact"><img src="../images/icon/suitcase-1.png" alt="">山明旅遊股份有限公司</p>
+                <p class="contact"><img src="../images/icon/telephone-1.png" alt="">電話：04-2234-9876</p>
+                <p class="contact"><img src="../images/icon/printers-1.png" alt="">傳真：04-2239-9876</p>
+                <p class="contact"><img src="../images/icon/email-1.png" alt="">E-mail：travelaround@gmail.com</p>
+            </div>
+
+            <div id="contacttil2">
+                <p>追蹤山明</p>
+                <a href="https://www.facebook.com/"><img class="contact2"
+                        src="../images/icon/facebook-social-logo-1.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="contact2" src="../images/icon/instagram-1.png"
+                        alt=""></a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
