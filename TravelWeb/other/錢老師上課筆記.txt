@@ -1,0 +1,102 @@
+Install-Package Microsoft.EntityFrameworkCore.Tools -version 5
+install-package Microsoft.EntityFrameworkCore.SqlServer -version 5
+Scaffold-DbContext "Server=MSI;Database=todoItemDb;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+todoItemDbContext.cs, 去掉:
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+...
+}
+
+開啟 appSettings.json，加入 ConnectionStrings 屬性
+    "ConnectionStrings": {
+      "linkToTodoItemDb": "Server=.\\sqlexpress;Database=todoItemDb;Integrated Security=True;"
+    }
+
+
+
+開啟 Startup.cs，加入 using 參照:
+using Microsoft.EntityFrameworkCore;
+using 你的專案名稱.Models;
+
+一樣是Startup.cs，找到 ConfigureServices()，
+加入下列程式到 ConfigureServices() 的第一行:
+services.AddDbContext<todoItemDbContext>(options =>
+options.UseSqlServer(Configuration.GetConnectionString("linkToTodoItemDb")));
+
+新增Controllers Todo
+新增View畫面 新增檢視 不要選空白
+todo/index
+
+把介面補完全
+
+using Lab1212_todo_mvc.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Lab1212_todo_mvc.Controllers
+{
+    public class TodoController : Controller
+    {
+        private todoItemDbContext _context;
+
+        public TodoController(todoItemDbContext _db)
+        {
+            this._context = _db;
+        }
+
+        public IActionResult Index()
+        {
+            // List<TodoItem> dataList = this._context.TodoItems.ToList();
+            var query = from o in this._context.TodoItems
+                       select o;
+            List<TodoItem> dataList = query.ToList();
+            return View("Index", dataList);
+        }
+    }
+
+-----------------------------------------------------
+create a folder name: Models
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -version 5
+install-package Microsoft.EntityFrameworkCore.SqlServer -version 5
+Scaffold-DbContext "Server=.\sqlexpress;Database=todoItemDb;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+todoItemDbContext.cs, 去掉:
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+...
+}
+
+開啟 appSettings.json，加入 ConnectionStrings 屬性
+    "ConnectionStrings": {
+      "linkToTodoItemDb": "Server=.\\sqlexpress;Database=todoItemDb;Integrated Security=True;"
+    }
+
+開啟 Startup.cs，加入 using 參照:
+    using Microsoft.EntityFrameworkCore;
+    using 你的專案名稱.Models;
+
+一樣是Startup.cs，找到 ConfigureServices()，
+    加入下列程式到 ConfigureServices() 的第一行:
+      services.AddDbContext<todoItemDbContext>(options =>
+          options.UseSqlServer(Configuration.GetConnectionString("linkToTodoItemDb")));
+
+
+滑鼠右鍵點按專案 | 加入 | 新增資料夾，
+名稱:「wwwroot」
+
+工具 | NuGet 套件管理員 | 套件管理器主控台
+輸入下列指令:
+
+    Install-Package Microsoft.AspNetCore.StaticFiles
+
+開啟 Startup.cs，找到 Configure()，
+    加入下列兩行程式到 app.UseRouting(); 之前
+
+    app.UseDefaultFiles();
+    app.UseStaticFiles();
+
+

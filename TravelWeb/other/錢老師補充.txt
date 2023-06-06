@@ -1,0 +1,82 @@
+[上午 10:01] planet21
+    https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Canvas?view=winrt-20348
+ 
+Canvas Class (Windows.UI.Xaml.Controls) - Windows UWP applicationsDefines an area within which you can explicitly position child objects, using coordinates that are relative to the Canvas area. docs.microsoft.com​[上午 10:38] planet21
+    https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Grid?view=winrt-20348
+ 
+Grid Class (Windows.UI.Xaml.Controls) - Windows UWP applicationsDefines a flexible grid area that consists of columns and rows. Child elements of the Grid are measured and arranged according to their row/column assignments (set by using Grid.Row and Grid.Column...docs.microsoft.com
+      
+    ​[下午 01:51] planet21
+    https://docs.microsoft.com/en-us/windows/apps/design/style/xaml-styles
+XAML styles - Windows appsStyles let you set control properties and reuse those settings for a consistent appearance across multiple controls.docs.microsoft.com
+[下午 02:23] planet21
+        <Page.Resources>
+        <Style x:Name="colorfulBorder" TargetType="Button">
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Red" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="0.75" />
+                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PurpleStyle" TargetType="Button"
+               BasedOn="{​​StaticResource colorfulBorder}​​">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground" Value="Purple"/>
+        </Style>
+        
+    </Page.Resources>
+    
+    <StackPanel Orientation="Horizontal">
+        <Button Content="Button" Style="{​​StaticResource PurpleStyle}​​" />
+        <Button Content="Button" Style="{​​StaticResource colorfulBorder}​​"/>
+        <Button Content="Button" Style="{​​StaticResource colorfulBorder}​​"/>
+    </StackPanel>
+    
+</Page>
+​[下午 02:27] planet21
+    14:40 go ahead
+​[下午 02:45] planet21
+    npm install
+​[下午 02:48] planet21
+    node app.js
+​[下午 02:49] planet21
+    http://localhost:3000/
+​[下午 02:50] planet21
+    http://localhost:3000/test
+​[下午 03:14] planet21
+    // using Windows.Web.Http;
+private async void Button_Click(object sender, RoutedEventArgs e)
+{​​
+    HttpClient hc = new HttpClient();
+    HttpResponseMessage result = await hc.GetAsync(
+        new Uri("http://localhost:3000/test"));
+    report.Text = await result.Content.ReadAsStringAsync();
+}​​
+
+
+
+按鈕傳遞資料
+// using Windows.Storage.Streams;
+private async void Post_Button_Click(object sender, RoutedEventArgs e)
+{
+    HttpClient hc = new HttpClient();
+ 
+    HttpStringContent dataToServer = new HttpStringContent(
+            "{ \"firstName\": \"Jeremy\" }",
+        UnicodeEncoding.Utf8,
+        "application/json"
+        );
+    HttpResponseMessage result = await hc.PostAsync(
+        new Uri("http://localhost:3000/testPost"),
+        dataToServer);
+ 
+    report.Text = await result.Content.ReadAsStringAsync();
+}

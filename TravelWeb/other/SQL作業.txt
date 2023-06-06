@@ -1,0 +1,94 @@
+
+*** 討論目標 ***
+
+	10. 檢查 SSMS 是否可以正常登入 及 匯入資料庫
+		. SSMS 登入
+			伺服器名稱：MSI
+			驗證(A)：Windows 驗證
+			使用者名稱：MSI\88698
+
+		. 匯入資料庫 AdventureWorksDW2019
+			!! 注意 !! 若 SQL Server 非 2019，請在下載位置選擇對應版本
+
+			下載位置：https://docs.microsoft.com/zh-tw/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms#download-backup-files
+			下載檔案：AdventureWorksDW2019.bak
+
+		. 將 .bak 範例資料庫還原至 SQL Server ：
+			說明文件：https://docs.microsoft.com/zh-tw/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms#restore-to-sql-server
+
+		. 若資料庫中無 北風資料庫(Northwind) 的存在
+			下載位置：https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
+			下載檔案：instnwnd.sql
+
+
+	11. 複習資料庫指令
+		
+		-- 310 列出 以下欄位 ProductID, ProductName, SupplierID
+		
+
+		-- 315 延續上題 310
+		--     請帶出該產品的供應商公司名稱(CompanyName)、聯絡電話(Phone)、聯絡人(ContactName)
+		--     相同供應商的資料請列在一起
+		select A.ProductID, A.ProductName,A.SupplierID,A.UnitsInStock,B.CompanyName,B.Phone,B.ContactName from  Products as A join Suppliers as B on A.SupplierID=B.SupplierID
+
+		-- 320 延續上題 310
+		--     請加入條件："庫存量低於再訂購量" 的產品資料
+
+		select A.ProductID, A.ProductName,A.SupplierID,A.UnitsInStock,A.UnitsOnOrder,B.CompanyName,B.Phone,B.ContactName from  Products as A join Suppliers as B on A.SupplierID=B.SupplierID 
+		where UnitsInStock<UnitsOnOrder
+
+		select * from  Products  where UnitsInStock=0
+		select * from  Suppliers
+		
+		-- 340. 那張訂單賺最多錢？ 
+
+		select TOP 1 OrderID,sum(UnitPrice* Quantity) as A from [Order Details] group by  OrderID order by A desc 
+
+
+		-- 350. 總共有幾位業務負責處理VINET的訂單？
+		select count(EmployeeID) from  Orders where CustomerID='VINET'
+
+		-- 360. 負責處理VINET的訂單是哪些業務？
+		select * from  Orders where CustomerID='VINET'
+
+		-- 370. VINET 的訂單中，找出訂單編號為10274所購買的產品清單，
+		--      請列出產品名稱、訂單價格等資訊
+		select * from  [Order Details] where  OrderID='10274'
+
+
+	15. 專案類型差異
+		. 主控台應用程式 (.Net Framework) 
+			=> 工具箱、主要編輯區(主要工作區)、方案總管、屬性
+
+		. Windows Forms App (.Net Framework) 
+			=> 工具箱、主要編輯區(主要工作區)、方案總管、屬性
+
+
+	16. 環境介紹 及 使用工具箱工具
+		. Program.cs
+		. Form.cs
+		. Form.Designer.cs
+
+
+	17. 程式執行
+		. 建構子
+		. 表單事件： 表單_Load、元件_Click
+		. 透過 Console.WriteLine 寫訊息觀察
+		. 設定中斷點 ==> 在行號前面的前面按下紅色圓圈
+			. 執行> 觸發事件> 中斷> 框選程式碼>快速監看式
+			. 執行> 觸發事件> 中斷> 逐步執行
+
+
+
+	//// *******************************************
+	// . [練習] 工具箱控制項(元件)使用
+	// 	* 取得畫面上所有控制項
+	// 	* 取得控制項名稱後，將控制項名稱逐一放入到 ListBox 中
+	//// *******************************************
+
+MyAdventureWorksDW2019Conn
+MyNorthwindConn
+
+Data Source=MSI;Initial Catalog=AdventureWorksDW2019;Integrated Security=True
+
+Properties.Settings.Default.MyDB
